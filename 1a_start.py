@@ -3,9 +3,9 @@
 UTA_ID : 1001668557
 """
 
-import numpy as np
 import csv
 import sys
+
 
 def CsvLoadFile(file_name, training=[]):            #loaded the CSV file with the given 2 dimensional dataset                  
     load_data = open(file_name, 'r')
@@ -19,13 +19,12 @@ def CsvLoadFile(file_name, training=[]):            #loaded the CSV file with th
             data[part][entity] = data[part][entity]
         if 1 == 1:
             training.append(data[part])
-    #print(training)
 
 
 if __name__ == '__main__':    
     
     csv_File_Name = sys.argv[1]     
-    if(len(sys.argv) == 2):                                 #made the order mandatory for the user to fill
+    if len(sys.argv) == 2:                                 #made the order mandatory for the user to fill
         print("Well Done! One part completed!")
     else:
         print("Kindly enter the order of the polynomial you would like to evaluate")
